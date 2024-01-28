@@ -2,7 +2,7 @@ const User = require("../models/User");
 
 console.log(User);
 //@create user
-//@POST api/users
+//@POST /api/users
 
 const createUser = async (req, res) => {
   if (!req.body.name || !req.body.email || !req.body.password) {

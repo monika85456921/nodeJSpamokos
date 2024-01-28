@@ -6,7 +6,7 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const Course = require("./models/Course");
+// const Course = require("./models/Course");
 const {
   createUser,
   getAllUsers,
@@ -14,6 +14,14 @@ const {
   updateUser,
   deleteUser,
 } = require("./controllers/userControllers");
+const {
+  createCourse,
+  getAllCourses,
+  getCourseByID,
+  updateCourse,
+  deleteCourse,
+} = require("./controllers/courseControllers");
+
 app.use(express.json());
 
 const mongoose = require("mongoose");
@@ -23,11 +31,19 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
+//user
 app.post("/api/users", createUser);
 app.get("/api/users", getAllUsers);
 app.get("/api/users/:id", getCustomId);
 app.put("/api/users/:id", updateUser);
 app.delete("/api/users/:id", deleteUser);
+
+//courses
+app.post("/api/courses", createCourse);
+app.get("/api/courses", getAllCourses);
+app.get("/api/courses/:id", getCourseByID);
+app.put("/api/courses/:id", updateCourse);
+app.delete("/api/courses/:id", deleteCourse);
 ///portas
 app.listen(process.env.PORT, () => {
   console.log("Server is running on port: " + process.env.PORT);
