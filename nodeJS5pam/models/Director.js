@@ -9,7 +9,7 @@ const directorSchema = new mongoose.Schema({
     type: String,
     required: [true, "enter last name"],
   },
-  DOB: {
+  dob: {
     type: Number,
     required: [true, "enter DOB"],
   },
