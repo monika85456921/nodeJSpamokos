@@ -13,14 +13,14 @@ const {
   getDirectorByID,
   updateDirector,
   deleteDirector,
-  getFullInfoAboutDirector,
+  // getFullInfoAboutDirector,
 } = require("./controllers/directorControllers.js");
 app.post("/api/directors", createDirector);
 app.get("/api/directors", getAllDirectors);
 app.get("/api/directors/:id", getDirectorByID);
 app.put("/api/directors/:id", updateDirector);
 app.delete("/api/directors/:id", deleteDirector);
-app.get("/api/directors/full", getFullInfoAboutDirector);
+// app.get("/api/directors/full", getFullInfoAboutDirector);
 //movies imports
 const {
   createMovie,

@@ -5,7 +5,7 @@ const Director = require("../models/Director.js");
 
 const createDirector = async (req, res) => {
   if (
-    !req.body.movieDirector ||
+    // !req.body.movieDirector ||
     !req.body.firstname ||
     !req.body.lastname ||
     !req.body.dob ||
@@ -14,7 +14,7 @@ const createDirector = async (req, res) => {
     res.status(404).send("No data");
   }
   const directorius = new Director({
-    movieDirector: req.body.movieDirector,
+    // movieDirector: req.body.movieDirector,
     firstname: req.body.firstname,
     lastname: req.body.lastname,
     dob: req.body.dob,
@@ -36,17 +36,17 @@ const getAllDirectors = async (req, res) => {
   res.status(200).json(directorFromDB);
 };
 //get FULL info about the director
-const getFullInfoAboutDirector = async (req, res) => {
-  const directorFromDB = await Director.find().populate(
-    "movieDirector",
-    "title year genre _id"
-  );
-  if (!directorFromDB) {
-    res.status(400).send("no data");
-    return;
-  }
-  res.status(200).json(directorFromDB);
-};
+// const getFullInfoAboutDirector = async (req, res) => {
+//   const directorFromDB = await Director.find().populate(
+//     "movieDirector",
+//     "title year genre _id"
+//   );
+//   if (!directorFromDB) {
+//     res.status(400).send("no data");
+//     return;
+//   }
+//   res.status(200).json(directorFromDB);
+// };
 
 //@Get director by id
 //@route GET /api/directors/:id
@@ -92,5 +92,5 @@ module.exports = {
   getDirectorByID,
   updateDirector,
   deleteDirector,
-  getFullInfoAboutDirector,
+  
 };
