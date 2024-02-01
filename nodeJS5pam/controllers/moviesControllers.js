@@ -63,4 +63,10 @@ const deleteMovie = async (req, res) => {
   res.status(200).send(result);
 };
 //
-module.exports = { createMovie, getAllMovies, getMovieById, updateMovie,deleteMovie };
+module.exports = {
+  createMovie,
+  getAllMovies,
+  getMovieById,
+  updateMovie,
+  deleteMovie,
+};

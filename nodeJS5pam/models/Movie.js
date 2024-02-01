@@ -18,10 +18,6 @@ const movieSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-// movieSchema.virtual("director",{
-//   ref:"Director",
-//   localField:_id,
-  
-// })
+
 const Movie = mongoose.model("Movie", movieSchema);
 module.exports = Movie;

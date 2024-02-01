@@ -1,7 +1,13 @@
 {
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "kill-port": "^2.0.1",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  },
   "name": "nodejs5pam",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
@@ -9,10 +15,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.4.1",
-    "express": "^4.18.2",
-    "mongoose": "^8.1.1",
-    "nodemon": "^3.0.3"
-  }
+  "description": ""
 }

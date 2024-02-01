@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const directorSchema = new mongoose.Schema({
+  movieDirector: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Movie",
+  },
   firstname: {
     type: String,
     required: [true, "enter name"],
